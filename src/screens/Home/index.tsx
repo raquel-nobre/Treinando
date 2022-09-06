@@ -1,5 +1,6 @@
 import { Text, View, TextInput, TouchableOpacity } from 'react-native';
 import { styles } from './styles';
+import { Participant } from './components/Participant';
 
 export default function Home() {
 
@@ -11,6 +12,8 @@ export default function Home() {
         <View style={styles.container}>
             <Text style={styles.eventName}>React</Text>
             <Text style={styles.eventDate}>Native</Text>
+
+            <View style={styles.form}>
             <TextInput 
             style={styles.input}
             placeholder='Nome do participante'
@@ -23,8 +26,8 @@ export default function Home() {
                     +
                 </Text>
             </TouchableOpacity>
-
-            
+            </View>
+            <Participant name="Raquel"/>
         </View>
     );
 }
